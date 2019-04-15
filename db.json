@@ -1,0 +1,139 @@
+{
+  "users": [
+    {
+      "email": "wfm@mail.ru",
+      "password": "12345678",
+      "name": "Администратор",
+      "id": 1
+    },
+    {
+      "email": "madev.thld@gmail.com",
+      "password": "12345678",
+      "name": "Алексей Мангутов",
+      "id": 2
+    }
+  ],
+  "bill": {
+    "value": 100000,
+    "currency": "RUB"
+  },
+  "categories": [
+    {
+      "name": "Еда2322",
+      "capacity": 140002,
+      "id": 1
+    },
+    {
+      "name": "Еда",
+      "capacity": 10000,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Машина",
+      "capacity": 7000
+    },
+    {
+      "name": "Работа",
+      "capacity": 20000,
+      "id": 4
+    },
+    {
+      "name": "Отпуск",
+      "capacity": 15055,
+      "id": 5
+    },
+    {
+      "name": "Развлечения",
+      "capacity": 10000,
+      "id": 6
+    },
+    {
+      "name": "Новая категория",
+      "capacity": 250000,
+      "id": 7
+    },
+    {
+      "name": "Клуб",
+      "capacity": 200000,
+      "id": 8
+    },
+    {
+      "name": "Дом",
+      "capacity": 200000,
+      "id": 9
+    },
+    {
+      "name": "Запись1",
+      "capacity": 12345678,
+      "id": 10
+    },
+    {
+      "name": "Запись2",
+      "capacity": 123333,
+      "id": 11
+    },
+    {
+      "name": "123",
+      "capacity": 1231231,
+      "id": 12
+    },
+    {
+      "name": "Дом24",
+      "capacity": 121212,
+      "id": 13
+    },
+    {
+      "name": "Дом15",
+      "capacity": 1123123,
+      "id": 14
+    },
+    {
+      "name": "",
+      "capacity": 13123125,
+      "id": 15
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "type": "income",
+      "amount": 1250,
+      "category": 2,
+      "date": "12.06.2017 19:49:02",
+      "description": "Подарили еду в гостях"
+    },
+    {
+      "id": 2,
+      "type": "outcome",
+      "amount": 1300,
+      "category": 1,
+      "date": "13.06.2017 19:49:02",
+      "description": "Купил посудомоечную машину"
+    },
+    {
+      "type": "income",
+      "amount": 1480,
+      "category": 2,
+      "date": "17.06.2017 14:00:48",
+      "id": 3,
+      "description": "Поход в окей с баллами. Бесплатная еда"
+    },
+    {
+      "type": "outcome",
+      "amount": 2470,
+      "category": 2,
+      "date": "17.06.2017 14:00:58",
+      "id": 4,
+      "description": "Закупка на неделю"
+    },
+    {
+      "type": "outcome",
+      "amount": 4000,
+      "category": 3,
+      "date": "10.06.2017 14:01:58",
+      "id": 5,
+      "description": "Заправка + проход ТО"
+    }
+  ]
+}
