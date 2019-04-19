@@ -1,23 +1,26 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Category} from '../../shared/models/category.model';
 import {CategoriesService} from '../../shared/services/categories.service';
 import {AnyMessage} from '../../../shared/models/any-message.model';
+import {Subscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'hacc-edit-category',
   templateUrl: './edit-category.component.html',
   styleUrls: ['./edit-category.component.scss']
 })
-export class EditCategoryComponent implements OnInit {
+export class EditCategoryComponent implements OnInit, OnDestroy {
   @Input() categories: Category[] = [];
   @Output() onCategoryEdit = new EventEmitter<Category>();
+  subToUpdateCategory$: Subscription;
 
   currentCategoryId = 1;
   currentCategory: Category;
   message: AnyMessage;
 
-  constructor(private categoriesService: CategoriesService) { }
+  constructor(private categoriesService: CategoriesService) {
+  }
 
   ngOnInit() {
     this.message = new AnyMessage('success', '');
@@ -30,9 +33,9 @@ export class EditCategoryComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    let { capacity } = form.value;
-    const { name } = form.value;
-    if ( capacity < 0 ) {
+    let {capacity} = form.value;
+    const {name} = form.value;
+    if (capacity < 0) {
       capacity *= -1;
     }
 
@@ -45,5 +48,9 @@ export class EditCategoryComponent implements OnInit {
       });
   }
 
-
+  ngOnDestroy() {
+    if (this.subToUpdateCategory$) {
+      this.subToUpdateCategory$.unsubscribe();
+    }
+  }
 }
