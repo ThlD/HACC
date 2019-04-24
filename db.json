@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 1444798,
+    "value": 1443525,
     "currency": "RUB"
   },
   "categories": [
@@ -100,6 +100,54 @@
       "date": "18.04.2019 10:11:47",
       "description": "Болел",
       "id": 7
+    },
+    {
+      "type": "income",
+      "amount": 5725,
+      "category": 5,
+      "date": "20.04.2019 12:10:03",
+      "description": "На всякий случай",
+      "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 4552,
+      "category": 5,
+      "date": "20.04.2019 13:21:15",
+      "description": "Test",
+      "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 500,
+      "category": 1,
+      "date": "21.04.2019 12:39:15",
+      "description": "test",
+      "id": 10
+    },
+    {
+      "type": "outcome",
+      "amount": 259,
+      "category": 1,
+      "date": "21.04.2019 12:42:19",
+      "description": "test",
+      "id": 11
+    },
+    {
+      "type": "outcome",
+      "amount": 1453,
+      "category": 2,
+      "date": "21.04.2019 12:58:44",
+      "description": "test",
+      "id": 12
+    },
+    {
+      "type": "outcome",
+      "amount": 234,
+      "category": 2,
+      "date": "21.04.2019 12:58:51",
+      "description": " e22",
+      "id": 13
     }
   ]
 }

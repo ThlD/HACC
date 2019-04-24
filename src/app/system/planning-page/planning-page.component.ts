@@ -44,7 +44,7 @@ export class PlanningPageComponent implements OnInit {
   }
 
   getCategoryCost(cat: Category): number {
-    let catEvents = this.events.filter((e) => {
+    const catEvents = this.events.filter((e) => {
       return e.category === cat.id && e.type === 'outcome';
     });
     return catEvents.reduce((total, e) => {
@@ -58,7 +58,7 @@ export class PlanningPageComponent implements OnInit {
     return percent > 100 ? 100 : percent;
   }
 
-  getCatPercent(cat: Category):string {
+  getCatPercent(cat: Category): string {
     return this.getPercent(cat) + '%';
   }
 

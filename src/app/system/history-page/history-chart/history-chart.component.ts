@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'hacc-history-chart',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryChartComponent implements OnInit {
 
-  constructor() { }
+  @Input() data;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
