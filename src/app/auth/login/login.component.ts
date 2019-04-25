@@ -5,11 +5,14 @@ import {User} from '../../shared/models/user.model';
 import {AnyMessage} from '../../shared/models/any-message.model';
 import {AuthService} from '../../shared/services/auth.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
+import {fadeStateTrigger} from '../../shared/animations/fade.animation';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'hacc-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  animations: [fadeStateTrigger]
 })
 export class LoginComponent implements OnInit {
   message: AnyMessage;
@@ -19,8 +22,17 @@ export class LoginComponent implements OnInit {
     private usersService: UsersService,
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private title: Title,
+    private meta: Meta
   ) {
+    title.setTitle('Вход в систему');
+    meta.removeTag(`name='keywords'`);
+    meta.removeTag(`name='description'`);
+    meta.addTags([
+      { name: 'keywords', content: 'логин,вход,система'},
+      { name: 'description', content: 'Страница для входа в систему'}
+    ]);
   }
 
   ngOnInit() {

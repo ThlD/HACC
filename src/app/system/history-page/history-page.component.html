@@ -8,7 +8,12 @@
     </button>
   </div>
 </div>
-<div *ngIf="!isLoaded" class="text-center">Loading...</div>
+<div
+  *ngIf="!isLoaded"
+  class="text-center"
+>
+  <hacc-loader></hacc-loader>
+</div>
 <div *ngIf="isLoaded">
   <hacc-history-chart [data]="chartData"></hacc-history-chart>
 

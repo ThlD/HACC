@@ -9,7 +9,12 @@
   </div>
 </div>
 <section class="section">
-  <div class="row text-center" *ngIf="!isLoaded">Loading...</div>
+  <div
+    class="row text-center"
+    *ngIf="!isLoaded"
+  >
+    <hacc-loader></hacc-loader>
+  </div>
   <div class="row" *ngIf="isLoaded">
     <hacc-bill-card [bill]="bill" [currency]="currency"></hacc-bill-card>
     <hacc-currency-card [currency]="currency"></hacc-currency-card>

@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build-prod": "ng build --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +27,7 @@
     "@swimlane/ngx-charts": "^5.3.1",
     "core-js": "^2.4.1",
     "d3": "^5.9.2",
+    "enhanced-resolve": "^4.1.0",
     "moment": "^2.24.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"

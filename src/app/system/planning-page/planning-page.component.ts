@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BillService} from '../shared/services/bill.service';
 import {CategoriesService} from '../shared/services/categories.service';
 import {EventsService} from '../shared/services/events.service';
@@ -7,7 +7,6 @@ import {combineLatest} from 'rxjs/observable/combineLatest';
 import {Bill} from '../shared/models/bill.model';
 import {Category} from '../shared/models/category.model';
 import {HACCEvent} from '../shared/models/event.model';
-import {delay} from 'rxjs/operators';
 
 @Component({
   selector: 'hacc-planning-page',
@@ -26,20 +25,20 @@ export class PlanningPageComponent implements OnInit {
     private billService: BillService,
     private categoriesService: CategoriesService,
     private eventsService: EventsService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.subToLoadData$ = combineLatest(
       this.billService.getBill(),
       this.categoriesService.getCategories(),
       this.eventsService.getEvents()
-    ).pipe(delay(200))
-      .subscribe((data: [Bill, Category[], HACCEvent[] ]) => {
-        this.bill = data[0];
-        this.categories = data[1];
-        this.events = data[2];
+    ).subscribe((data: [Bill, Category[], HACCEvent[]]) => {
+      this.bill = data[0];
+      this.categories = data[1];
+      this.events = data[2];
 
-        this.isLoaded = true;
+      this.isLoaded = true;
     });
   }
 

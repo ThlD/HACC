@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 1443525,
+    "value": 1441090,
     "currency": "RUB"
   },
   "categories": [
@@ -148,6 +148,14 @@
       "date": "21.04.2019 12:58:51",
       "description": " e22",
       "id": 13
+    },
+    {
+      "type": "outcome",
+      "amount": 2435,
+      "category": 3,
+      "date": "24.04.2019 21:38:28",
+      "description": "Test12312",
+      "id": 14
     }
   ]
 }
